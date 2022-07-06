@@ -8,17 +8,17 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "pwa-chrome",
-            "url": "http://localhost:4200",
-            "webRoot": "${workspaceFolder}/ChatFrontEnd"
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/ChatApi"
         },
         {
-            "name": ".NET Core Launch (web)",
+            "name": "Launch ChatApi",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/ChatApi/bin/Debug/netcoreapp3.1/ChatApi.dll",
+            "program": "${workspaceFolder}/ChatApi/bin/Debug/net6.0/ChatApi.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/ChatApi",
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
@@ -28,9 +28,16 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
+                "/Views": "${workspaceFolder}/ChatApi/Views"
             }
         },
+        {
+            "name": "ng serve",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200/#",
+            "webRoot": "${workspaceFolder}/ChatFrontend/ClientApp"
+          },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
